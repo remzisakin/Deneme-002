@@ -13,6 +13,11 @@ Bu depo, Streamlit tabanlı "Akıllı Veri Analizcisi" uygulamasını içerir.
    ```bash
    pip install -r requirements.txt
    ```
+
+   > **İpucu:** Komutu çalıştırmadan önce terminalinizin `requirements.txt` dosyasının
+   > bulunduğu depo dizininde (`Deneme-002`) olduğundan emin olun. Örneğin Windows
+   > PowerShell kullanıyorsanız önce `cd C:\AI_Program\Deneme-002` komutunu çalıştırın;
+   > aksi hâlde `requirements.txt` bulunamadı hatası alırsınız.
 3. Uygulamayı başlatın:
    ```bash
    streamlit run app.py
