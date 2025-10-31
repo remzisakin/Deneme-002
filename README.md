@@ -6,24 +6,35 @@ Bu depo, Streamlit tabanlı "Akıllı Veri Analizcisi" uygulamasını içerir.
 
 1. Depoyu klonlayın:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/<kullanici-adiniz>/Deneme-002.git
    cd Deneme-002
    ```
+
+   > **Önemli:** Yukarıdaki URL örnektir. `git clone` komutunu yazarken `https://github.com/<kullanici-adiniz>/Deneme-002.git`
+   > kısmındaki `<kullanici-adiniz>` bölümünü kendi GitHub kullanıcı adınızla değiştirin. PowerShell'de `<` ve `>`
+   > karakterlerini aynen yazmak komutun çalışmamasına neden olur ("The '<' operator is reserved" hatası).
 2. Gerekli paketleri kurun (önerilen sanal ortam içerisinde):
    ```bash
+   python -m venv .venv
+   .venv\Scripts\activate      # Windows PowerShell
+   # source .venv/bin/activate  # macOS / Linux
    pip install -r requirements.txt
    ```
 
    > **İpucu:** Komutu çalıştırmadan önce terminalinizin `requirements.txt` dosyasının
    > bulunduğu depo dizininde (`Deneme-002`) olduğundan emin olun. Örneğin Windows
-   > PowerShell kullanıyorsanız önce `cd C:\AI_Program\Deneme-002` komutunu çalıştırın;
-   > aksi hâlde `requirements.txt` bulunamadı hatası alırsınız.
+   > PowerShell kullanıyorsanız `ls` yazdığınızda dosya listesinde `requirements.txt` görünmelidir.
+   > Eğer görünmüyorsa `cd C:\AI_Program\Deneme-002` komutuyla klasöre geçin, aksi hâlde
+   > "Could not open requirements file" hatası alırsınız.
 3. Uygulamayı başlatın:
    ```bash
    streamlit run app.py
    ```
 
-> **Not:** Eğer `git pull` komutunu çalıştırırken "fatal: not a git repository" hatası alırsanız, komutu bir Git deposu içinde çalıştırdığınızdan emin olun. Örneğin, `Deneme-002` klasörünün içinde `.git` klasörü bulunmalıdır. Eğer yoksa depoyu yeniden klonlayın veya `git init` ile yeni bir depo başlatın.
+> **Not:** Eğer `git pull` veya başka bir Git komutunu çalıştırırken "fatal: not a git repository" hatası alırsanız, komutu
+> bir Git deposu içinde çalıştırdığınızdan emin olun. `Deneme-002` klasörünün içinde `.git` klasörü görünmüyorsa depo
+> henüz klonlanmamış demektir. Bu durumda komut satırında `git status` yazarak nerede olduğunuzu kontrol edin; gerekirse
+> `git clone ...` adımını tekrarlayın veya `git init` ile yeni bir depo başlatın.
 
 ## Çevresel Değişkenler
 
